@@ -3,12 +3,12 @@
 CWD=`pwd`;
 NMOD="$CWD"
 DEPTH=0;
+ARGS=$@;
 NOBIN='\033[0;36m[NOBIN]\033[0m';
 
-echo "$@"
 if [ $# -eq 0 ];
 then
- printf "$NOBIN No arguments supplied to Nobin.\n";
+ printf "$NOBIN No arguments supplied\n";
  exit 1;
 fi
 
@@ -24,7 +24,9 @@ done
 
 cd "$NMOD";
 NEWCWD=`pwd`;
-printf "$NOBIN Found node Modules directory at: $NEWCWD \n"
-printf "$NOBIN running: $@ \n"
+IFS=" ";
+printf "$NOBIN Found node_modules directory at: $NEWCWD/node_modules/ \n"
+printf "$NOBIN Running: %s" "${ARGS[*]}"
+echo -e "";
 
 "$NEWCWD/node_modules/.bin/$@"

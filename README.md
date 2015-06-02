@@ -8,16 +8,25 @@ Quickly call node binary modules that are installed within closest node_modules/
 Looks for closest node_modules directory and will execute binary insde of .bin
 
 ```bash
-nobin grunt build
+nobin gulp lint
 ```
 
 is equivalant to running
 
 ```bash
-node_modules/.bin/grunt build
+node_modules/.bin/gulp lint
 ```
 
 However, Nobin will recurse up your directory tree looking for a node_modules directory.
+
+**Output will be:**
+```bash
+[NOBIN] Found node_modules directory at: /home/o/oneal312/projects/harbinger/node_modules/
+[NOBIN] Running: gulp lint
+[11:29:55] Using gulpfile /vs~/projects/harbinger/gulpfile.js
+[11:29:55] Starting 'lint'...
+[11:29:55] Finished 'lint' after 518 ms
+```
 
 ### Installation
 
