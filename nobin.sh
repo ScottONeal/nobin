@@ -12,7 +12,7 @@ then
  exit 1;
 fi
 
-until [ -d "$CWD/node_modules" ]; do
+until [ -d "$NMOD/node_modules" ]; do
   DEPTH=$((DEPTH + 1));
   if [ "$DEPTH" -ge "10" ];
   then
