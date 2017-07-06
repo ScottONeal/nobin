@@ -30,13 +30,6 @@ However, Nobin will recurse up your directory tree looking for a node_modules di
 
 ### Installation
 
-Clone repo
-
-```bash
-git clone https://github.com/ScottONeal/nobin.git ~/tools/nobin
 ```
-
-Alias nobin in your .bashrc
-```bash
-alias nobin='$HOME/tools/nobin/nobin.sh'
+npm install -g nobin
 ```
